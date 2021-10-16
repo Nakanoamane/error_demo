@@ -1,0 +1,15 @@
+<section class="section">
+	<h1 class="title">詳細</h1>
+	<a href="<%= users_path %>" class="linkBack">一覧へ戻る</a>
+
+	<dl class="dataList">
+		<div class="dataList_item">
+			<dt>名前</dt>
+			<dd><%= @user.name %></dd>
+		</div>
+		<div class="dataList_item">
+			<dt>好きな食べ物</dt>
+			<dd><%= @user.foods&.map{|f| f.name}&.join('、 ') %></dd>
+		</div>
+	</dl>
+</section>
